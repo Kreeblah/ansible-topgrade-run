@@ -1,0 +1,6 @@
+---
+- name: Test topgrade_run
+  hosts: localhost
+  remote_user: root
+  roles:
+    - topgrade_run

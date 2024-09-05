@@ -1,2 +1,2 @@
-# ansible-topgrade-run
+# topgrade_run
 Ansible role for running topgrade

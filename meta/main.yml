@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  namespace: kreeblah
+  role_name: topgrade_run
+  author: Chris Gelatt
+  description: Run topgrade
+
+  license: GPL-3.0-or-later
+
+  min_ansible_version: "2.17"
+
+  galaxy_tags:
+    - topgrade
+    - system
+    - server
+    - update
+
+dependencies: []

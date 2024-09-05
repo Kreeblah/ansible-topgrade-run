@@ -1,0 +1,18 @@
+- name: Check for topgrade command
+  ansible.builtin.raw: which topgrade
+  check_mode: false
+  changed_when: false
+  failed_when: which_topgrade_result.rc > 1
+  register: which_topgrade_result
+
+- name: Run topgrade
+  when: which_topgrade_result.rc == 0
+  block:
+    - name: Run topgrade command
+      ansible.builtin.command: topgrade
+      changed_when: true
+      register: topgrade_output
+
+    - name: Display topgrade output
+      ansible.builtin.debug:
+        msg: "{{ topgrade_output.stdout_lines }}"
